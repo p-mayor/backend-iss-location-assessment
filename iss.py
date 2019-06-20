@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 
 import urllib
-
-__author__ = 'peter mayor'
-
 import turtle
 import time
+
+__author__ = 'peter mayor'
 
 
 def turtleStart(lat, lon, time):

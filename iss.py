@@ -9,21 +9,22 @@ __author__ = 'peter mayor'
 
 def turtleStart(lat, lon, time):
     '''plot indy dot, write passover time, plot iss location from lat,lon'''
-    map_skew_multiplier = 4
-    indy_lat = -40
-    indy_lon = 87
+    indy_lat = 40
+    indy_lon = -87
     turtle.screen = turtle.Screen()
     turtle.screen.bgpic("map.gif")
     turtle.screen.register_shape("iss.gif")
     turtle.shape('iss.gif')
+    turtle.setup(720, 360)
+    turtle.setworldcoordinates(-180, -90, 180, 90)
 
     turtle.penup()
-    turtle.goto(indy_lat*map_skew_multiplier, indy_lon)
+    turtle.goto(indy_lon, indy_lat)
     turtle.dot(10, 'yellow')
 
     turtle.write(time, font=("Arial", 16, "bold"))
 
-    turtle.goto(lat*map_skew_multiplier, lon)
+    turtle.goto(lon, lat)
     turtle.done()
 
 

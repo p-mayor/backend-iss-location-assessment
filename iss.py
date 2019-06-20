@@ -73,7 +73,7 @@ def get_indy_passover_time(iss_lat, iss_lon):
 
 
 def main():
-
+    '''get iss data and plot on map'''
     get_astronauts()
     iss_lat, iss_lon = get_iss_location()
     time = get_indy_passover_time(iss_lat, iss_lon)
